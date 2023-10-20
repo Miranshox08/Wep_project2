@@ -1,0 +1,11 @@
+{% extends "base.html"%}
+{% blok content%}
+<from class="site-from has-background-light" method="post" action="{% url 'article_ceate' %}" enctype="multipart/from-data">
+    {% csrf_token %}
+    {{from}}
+    <div class="has-text-centerend my-2">
+        <button type="submit" class="button is-success">Enter</button>
+        <a href="{% url 'article_func' %}" class="button is-danger">Otmena</a>
+    </div>
+    </from>
+{% endblok%}
